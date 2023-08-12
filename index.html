@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <link type="Image/x-icon" href="image/плеер.ico" rel="icon">
+</head>
+<body> 
+    <img src="image/spiderManBackground.png" alt="background" class="backgroundImage">
+    <audio src="audio/Whats_Up_Danger.mp3" id="myAudio"></audio>
+    <div class="audioPlayer">
+        <div class = "interface"></div>
+        <img src="image/spiderMan.png" alt="cover" class="cover">
+        <img src="image/play.png" alt="play" class="playPause">
+        <img src="image/backward.png" alt="backward" class="musicSelection" id="previousSong">
+        <img src="image/forward.png" alt="forward" class="musicSelection" id="nextSong">
+        <div class="artistContainer">
+            <div class="artist"><span class="artistSpan">Blackway, Black Caviar</span></div>
+        </div> 
+        <div class="songTitleContainer">
+            <div class="songTitle"><span class="songTitleSpan">What's Up Danger</span></div>
+        </div>
+        <input type="range" id="progress-bar" min="0" max="0" value="0" onchange="changeProgressBar()">
+        <div class="currentTime">0:00</div>
+        <div class="durationTime">0:00</div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

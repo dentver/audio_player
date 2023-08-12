@@ -1,0 +1,177 @@
+@font-face{
+    font-family: 'Montserrat';
+    src:local('Montserrat'),url('fonts/Montserrat.ttf')
+  }
+body{
+    background-color: black;
+}
+.audioPlayer{
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    height: 300pt;
+    width: 250pt;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #000000;
+}
+.backgroundImage{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    filter: blur(10px);
+}
+.interface{
+    position: absolute;
+    width: 103%;
+    height: 50%;
+    bottom: -17%;
+    z-index: 4;
+    background: -webkit-linear-gradient(45deg, rgb(40, 40, 40), rgb(133, 133, 133));
+}
+.cover{
+    position: absolute;
+    width: 103%;
+    top:-7%;
+    transition: width 1s;
+}
+.playPause{
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    filter: invert(1);
+    cursor: pointer;
+    bottom: 15%;
+    z-index: 4;
+    left: 9%;
+    transition: .3s;
+}
+.playPause:hover{
+    opacity: 0.7;
+}
+.musicSelection{
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    filter: invert(1);
+    cursor: pointer;
+    bottom: 13.5%;
+    z-index: 4;
+    transition: .3s;
+}
+.musicSelection:hover{
+    opacity: 0.7;
+}
+#nextSong{
+    right: 10%;
+}
+#previousSong {
+    right: 10.3%;
+    bottom: 21.5%;
+}
+.artistContainer{
+    position: absolute;
+    width: 50%;
+    z-index: 4;
+    color: rgb(193, 255, 6);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    bottom: 21%;
+    left: 28%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.songTitleContainer{
+    position: absolute;
+    width: 50%;
+    z-index: 4;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 17px;
+    bottom: 16%;
+    left: 28%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+#progress-bar {
+    -webkit-appearance: none;
+    appearance: none;
+    position: absolute;
+    z-index: 4;
+    height: 5px;
+    background: #000000;
+    width: 160pt;
+    bottom: 5%;
+    border-radius: 30px;
+    left: 17%;
+}
+#progress-bar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    margin-top: -3px;
+    margin-left: 0px;
+    height: 10px;
+    width: 7px;
+    border: 0;
+    background: -webkit-linear-gradient(45deg, rgb(213, 213, 213), rgb(193, 255, 6));
+    border-radius: 30px;
+    cursor: pointer;
+  }
+.currentTime {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    bottom: -7.5%;
+    left: 17%;
+    z-index: 4;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    color: white;
+    align-items: center;
+}
+.durationTime {
+    position: absolute;
+    width: 50px;
+    cursor: pointer;
+    bottom: 7%;
+    right: 11%;
+    z-index: 4;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    align-items: center;
+    color: rgb(193, 255, 6);
+}
+.marquee{
+    width:100%;
+    white-space:nowrap;
+    overflow:hidden;
+    }
+     
+    .marquee span {
+    display:inline-block;
+    padding-left:100%;
+    -webkit-animation: marquee 10s infinite linear;
+    animation: marquee 10s infinite linear;
+    }
+     
+    @-webkit-keyframes marquee {
+    0%{-webkit-transform: translate(0, 0);}
+    100%{-webkit-transform: translate(-100%, 0);}
+    }
+    @keyframes marquee{
+    0%{transform: translate(0, 0);}
+    100%{transform: translate(-100%, 0)}
+    }
